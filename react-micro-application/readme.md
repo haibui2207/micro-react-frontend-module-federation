@@ -1,1 +1,2 @@
-Article: https://medium.com/p/1aaf3d3479ea/edit
+### Medium article: 
+React Federation: How to create a micro React application implement Module Federation
