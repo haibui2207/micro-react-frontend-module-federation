@@ -10,10 +10,8 @@ module.exports = {
   mode: isDevelopment ? "development" : "production",
   entry: [path.resolve("src/index.jsx")],
   output: {
-    path: path.resolve("build"),
-    filename: "[name].js",
-    chunkFilename: "[name].js",
-    publicPath: "/",
+    clean: true,
+    publicPath: "auto",
   },
   resolve: {
     extensions: [".js", ".jsx"],
@@ -48,9 +46,9 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "Test",
-      library: { type: "var", name: "Test" },
-      filename: "test.js",
+      name: "React micro application",
+      library: { type: "var", name: "ReactMicroApplication" },
+      filename: "react-micro-application.js",
       exposes: {
         "./App": "./src/App",
       },
