@@ -48,7 +48,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "Container",
       remotes: {
-        Products: "Products@http://localhost:3001/products.js",
+        Product: "Product@http://localhost:3001/product.js",
         RelatedProducts:
           "RelatedProducts@http://localhost:3002/related-products.js",
       },

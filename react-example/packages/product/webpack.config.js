@@ -46,9 +46,9 @@ module.exports = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "Products",
-      library: { type: "var", name: "Products" },
-      filename: "products.js",
+      name: "Product",
+      library: { type: "var", name: "Product" },
+      filename: "product.js",
       exposes: {
         "./App": "./src/App",
       },

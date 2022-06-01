@@ -18,35 +18,31 @@ const products = [
   },
 ];
 
-const App = () => {
-  return (
-    <div
-      style={{
-        flex: "none",
-        width: "300px",
-        height: "inherit",
-        padding: "16px",
-        boxSizing: "border-box",
-      }}
-    >
-      <h2 style={{ marginTop: 0, textAlign: "center" }}>Related products</h2>
-      {products.map((product, index) => (
-        <div key={index} style={{ cursor: "pointer" }}>
-          <div
-            style={{
-              height: "100px",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundImage: `url(${product.thumbnail})`,
-            }}
-          />
-          <p style={{ marginTop: "4px", textAlign: "center" }}>
-            {product.title}
-          </p>
-        </div>
-      ))}
-    </div>
-  );
-};
+const App = () => (
+  <div
+    style={{
+      flex: "none",
+      width: "300px",
+      height: "inherit",
+      padding: "16px",
+      boxSizing: "border-box",
+    }}
+  >
+    <h2 style={{ marginTop: 0, textAlign: "center" }}>Related products</h2>
+    {products.map((product, index) => (
+      <div key={index} style={{ cursor: "pointer" }}>
+        <div
+          style={{
+            height: "100px",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundImage: `url(${product.thumbnail})`,
+          }}
+        />
+        <p style={{ marginTop: "4px", textAlign: "center" }}>{product.title}</p>
+      </div>
+    ))}
+  </div>
+);
 
 export default App;
